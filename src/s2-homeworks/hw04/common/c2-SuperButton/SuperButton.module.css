@@ -1,0 +1,47 @@
+.button {
+	padding: 7px;
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.disabled {
+	background-color: #0066cc47;
+	cursor: default;
+}
+
+.secondary {
+	background-color: antiquewhite;
+	color: blue;
+	border-color: blue;
+}
+
+.default {
+	background-color: #0066CC;
+}
+
+.red {
+	background-color: red;
+}
+
+.default:hover {
+}
+
+.red:hover {
+}
+
+.secondary:hover {
+}
+
+
+.default:active {
+}
+
+.secondary:active {
+}
+
+.red:active {
+}
+
+.button:disabled {
+}

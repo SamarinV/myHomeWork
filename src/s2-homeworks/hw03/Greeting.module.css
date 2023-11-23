@@ -1,0 +1,46 @@
+.greetingForm {
+}
+
+.inputAndButtonContainer {
+	display: flex;
+}
+
+.error {
+	color: red;
+}
+
+.input {
+}
+
+.input:focus {
+}
+
+.errorInput {
+	border-color: red;
+}
+
+.button {
+	background-color: rgb(87, 87, 255);
+	color: white;
+	width: 60px;
+	height: 30px;
+	margin-left: 20px;
+	border-radius: 10px;
+}
+
+.button:hover {
+	cursor: pointer;
+	background-color: rgb(32, 32, 253);
+}
+
+.button:active {
+}
+
+.button:disabled {
+}
+
+.text {
+}
+
+.greeting {
+}

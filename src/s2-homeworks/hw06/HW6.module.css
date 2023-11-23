@@ -1,0 +1,10 @@
+.buttonsContainer {
+	margin-top: 20px;
+}
+.buttonsContainer button:last-child{
+	margin-left: 20px;
+}
+
+.editableSpanContainer {
+	color: blue;
+}
