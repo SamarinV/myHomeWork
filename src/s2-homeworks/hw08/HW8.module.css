@@ -1,19 +1,30 @@
 .item {
+	border-bottom: 1px solid grey;
+	height: 40px;
 }
 
 .item:last-of-type {
+	border-bottom: none;
 }
 
 .users {
+	margin-top: 20px;
+	border-collapse: collapse;
 }
 
 .buttonsContainer {
+	align-self: flex-end;
 }
 
 .container {
+	width: 500px;
+	display: flex;
+	flex-direction: column;
 }
 
 .thead {
+	background-color: grey;
+	height: 40px;
 }
 
 .nameCol {
