@@ -13,24 +13,21 @@ export const homeWorkReducer = (
     case "sort": {
       // by name
       if (action.payload === "up") {
-        const sortedState = state.sort((a, b) => a.name.localeCompare(b.name));
-        return sortedState;
+        const copyState = [...state];
+        copyState.sort((a, b) => a.name.localeCompare(b.name));
+        return copyState;
       }
       if (action.payload === "down") {
-        const sortedState = state
-          .sort((a, b) => a.name.localeCompare(b.name))
-          .reverse();
-        return sortedState;
+        const copyState = [...state];
+        copyState.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+        return copyState;
       }
       return state; // need to fix
     }
     case "check": {
-      const sortedState = state
-        .filter((a) => a.age >= 18)
-        .sort((a, b) => {
-          return b.age - a.age;
-        });
-      return sortedState; // need to fix
+      const copyState = [...state];
+      const newState = copyState.filter((a) => a.age >= 18);
+      return newState; // need to fix
     }
     default:
       return state;
