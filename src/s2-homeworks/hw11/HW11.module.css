@@ -10,6 +10,9 @@
 .number {
 	margin-right: 15px;
 }
-/* .numberRight {
+.sliderWrapper {
+	min-width: 200px;
+}
+.numberRight {
 	margin-left: 15px;
-} */
+}
