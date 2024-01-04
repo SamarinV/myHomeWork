@@ -1,8 +1,15 @@
 .container {
+	width: 350px;
 }
 
 .wrapper {
+	width: 250px;
+	display: flex;
 }
 
 .number {
+	margin-right: 15px;
 }
+/* .numberRight {
+	margin-left: 15px;
+} */
