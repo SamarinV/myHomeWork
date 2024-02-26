@@ -3,10 +3,6 @@ import DownIcon from "@mui/icons-material/ArrowDropDown"
 import UpIcon from "@mui/icons-material/ArrowDropUp"
 import SwapVertIcon from "@mui/icons-material/SwapVert"
 
-// добавить в проект иконки и импортировать
-const downIcon = "[\\/]"
-const upIcon = "[/\\]"
-const noneIcon = "[--]"
 
 const cssForIcons = {
   fontSize: "small",
@@ -42,6 +38,8 @@ export type SuperSortPropsType = {
 }
 
 export const pureChange = (sort: string, down: string, up: string) => {
+	console.log("down", down)
+	console.log('up', up)
   if (sort === "") {
     return down
   } else if (sort === down) {
@@ -65,7 +63,8 @@ const SuperSort: React.FC<SuperSortPropsType> = ({ sort, value, onChange, id = "
 
   return (
     <span id={id + "-sort-" + value} onClick={onChangeCallback}>
-      {icon} {/*а это убрать*/}
+      {icon}
+      {/* <img id={id + "-icon-" + sort} src={icon} /> */}
     </span>
   )
 }

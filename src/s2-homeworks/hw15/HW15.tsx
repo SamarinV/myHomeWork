@@ -22,7 +22,7 @@ type TechType = {
 }
 
 type ParamsType = {
-  sort: string
+  sort?: string
   page: number
   count: number
 }
@@ -52,30 +52,34 @@ const HW15 = () => {
       if (res && res.status === 200) {
         const newTech = res.data.techs
         setTotalCount(res.data.totalCount)
-        if (sort === "1tech" || sort === "1developer") {
-          const reverse = newTech.reverse()
-          setTechs(reverse)
-        } else {
-          setTechs(newTech)
-        }
+        setTechs(newTech)
       }
       setLoading(false)
     })
   }
 
   const onChangePagination = (newPage: number, newCount: number) => {
-    setPage(newPage)
-    setCount(newCount)
-    sendQuery({ page: newPage, count: newCount })
-    searchParams.set("page", `${newPage}`)
-    searchParams.set("count", `${newCount}`)
-    setSearchParams(searchParams)
+    if (newCount === count) {
+      setPage(newPage)
+      sendQuery({ page: newPage, count: newCount })
+      searchParams.set("page", `${newPage}`)
+      searchParams.set("count", `${count}`)
+      setSearchParams(searchParams)
+    } else {
+      setPage(1)
+      setCount(newCount)
+      sendQuery({ page: 1, count: newCount })
+      searchParams.set("page", `1`)
+      searchParams.set("count", `${newCount}`)
+      setSearchParams(searchParams)
+    }
   }
 
   const onChangeSort = (newSort: string) => {
     setSort(newSort)
     setPage(1)
-    sendQuery({ page: 1, count })
+    console.log(newSort)
+    sendQuery({ page: 1, count, sort: newSort })
     searchParams.set("page", `1`)
     searchParams.set("count", `${count}`)
     setSearchParams(searchParams)
@@ -83,7 +87,7 @@ const HW15 = () => {
 
   useEffect(() => {
     const params = Object.fromEntries(searchParams)
-    sendQuery({ page: params.page, count: params.count })
+    sendQuery({ page: params.page, count: params.count, sort: params.sort })
     setPage(+params.page || 1)
     setCount(+params.count || 4)
   }, [])
