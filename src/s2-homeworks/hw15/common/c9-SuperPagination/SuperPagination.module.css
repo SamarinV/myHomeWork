@@ -1,11 +1,17 @@
 .pagination {
     display: flex;
+		margin-bottom: 20px;
+		align-items: center;
 }
 
 .text1 {
-
+margin-left: 20px;
 }
 
 .text2 {
-
+	margin-left: 20px;
+}
+.superSelect {
+	width: 40px;
+	margin-left: 10px;
 }

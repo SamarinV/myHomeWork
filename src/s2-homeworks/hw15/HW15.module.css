@@ -1,17 +1,26 @@
+.tech, .developer{
+	margin: 10px 0;
+	border-bottom: 1px solid rgb(230, 230, 230);
+}
 .tech {
-    width: 50vw;
+    width: 25vw;
+		padding: 5px;
 }
 
 .developer {
-
+width: 25vw;
+	padding: 5px;
 }
 
-.techHeader {
-    width: 50vw;
+.techHeader, .developerHeader {
+    width: 25vw;
+		background-color: rgb(230, 230, 230);
+		padding: 5px;
+		font-weight: 900;
 }
 
 .developerHeader {
-
+	padding-left: 0;
 }
 
 .row {
